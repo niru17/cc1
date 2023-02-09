@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+      #customers tr:hover {background-color: #ddd;}
+      
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #436283;
+        color: white;
+      }
+			h1{text-align: left;}
+         div{text-align: left;}
+      </style>
+      </head>
+   <body style="background-color:	#FFFFE0	;">   
+      <h1>Niranjana Subramanian</h1>
+		<h1>46305</h1>
+         <br>
+      <div>
+         <a href="/">Home</a>
+      </div>   
+   <br> <br>
+      <br> <br>
+      <div>
+      <table id='customers'>
+         <tr>
+            <td><b>Picture</b></td><br>
+            <td><b>Keyword</b></td> 
+         </tr>
+         {% for col in rows %}
+         <tr>
+            <td><img style="height: 150px"  src="static/{{col[2]}}" alt="No Image Found"></td> 
+            <td>{{col[3]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+</div>
+      <br>
+     
+   </body>
+</html>
